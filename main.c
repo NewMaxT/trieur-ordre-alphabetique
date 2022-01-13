@@ -1,12 +1,9 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
-#include <string.h>
 
 #define MAX_LIGNE (1500)
 #define MAX_COL (1500)
 
-#define CHAR_TAILLE (50)
 char CHEMIN_FICHIER_LECTURE[50];
 char CHEMIN_FICHIER_ECRITURE[50];
 
@@ -16,18 +13,18 @@ FILE *fichier = NULL;
 int main(void)
 {
     do {
-      printf("Indiquez le chemin du fichier à trier :\n");
-      scanf("%s", CHEMIN_FICHIER_LECTURE);
+        printf("Indiquez le chemin du fichier a trier :\n");
+        scanf("%s", CHEMIN_FICHIER_LECTURE);
 
-      fichier = fopen(CHEMIN_FICHIER_LECTURE, "r");
+        fichier = fopen(CHEMIN_FICHIER_LECTURE, "r");
 
-      if(NULL == fichier)  {
-        printf("Erreur: Fichier introuvable\nVeuillez recommencer.\n");
-      }
+        if(NULL == fichier)  {
+            printf("Erreur: Fichier introuvable\nVeuillez recommencer.\n");
+        }
     } while (NULL == fichier);
-    
 
-    
+
+
 
     int nbMots = 0;
 
@@ -55,21 +52,21 @@ int main(void)
 
     char userInput[1];
 
-    printf("Voulez vous ecrasez le fichier ? (O/N)\n");
+    printf("Voulez-vous ecraser le fichier ? (O/N)\n");
     scanf("%s", userInput);
 
     do {
-      if (strcmp(userInput, "N") == 0) {
-        printf("Indiquez le chemin du fichier en sortie :\n");
-        scanf("%s", CHEMIN_FICHIER_ECRITURE);
-        fichier = fopen(CHEMIN_FICHIER_ECRITURE, "w+");
-      } else {
-        fichier = fopen(CHEMIN_FICHIER_LECTURE, "w+");
-      }
-      
-      if(NULL == fichier)  {
-        printf("Erreur: Fichier introuvable\nVeuillez recommencer.\n");
-      }
+        if (strcmp(userInput, "N") == 0) {
+            printf("Indiquez le chemin du fichier en sortie :\n");
+            scanf("%s", CHEMIN_FICHIER_ECRITURE);
+            fichier = fopen(CHEMIN_FICHIER_ECRITURE, "w+");
+        } else {
+            fichier = fopen(CHEMIN_FICHIER_LECTURE, "w+");
+        }
+
+        if(NULL == fichier)  {
+            printf("Erreur: Fichier introuvable\nVeuillez recommencer.\n");
+        }
     } while (NULL == fichier);
 
 
@@ -78,7 +75,7 @@ int main(void)
     }
 
 
-    printf("Trie effectué et placé dans : ");
+    printf("Trie effectue et place dans : ");
     printf("%s\n", CHEMIN_FICHIER_ECRITURE);
 
     fclose(fichier);
