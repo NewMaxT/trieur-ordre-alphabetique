@@ -10,8 +10,7 @@ char CHEMIN_FICHIER_ECRITURE[50];
 static char mots[MAX_LIGNE][MAX_COL] = {{'\0','\0'}};
 FILE *fichier = NULL;
 
-int main(void)
-{
+int main(void)  {
     do {
         printf("Indiquez le chemin du fichier a trier :\n");
         scanf("%s", CHEMIN_FICHIER_LECTURE);
@@ -22,9 +21,6 @@ int main(void)
             printf("Erreur: Fichier introuvable\nVeuillez recommencer.\n");
         }
     } while (NULL == fichier);
-
-
-
 
     int nbMots = 0;
 
@@ -69,11 +65,9 @@ int main(void)
         }
     } while (NULL == fichier);
 
-
     for( i=0; i < nbMots; i++ ) {
         fprintf(fichier, "%s\n", mots[i]);
     }
-
 
     printf("Trie effectue et place dans : ");
     printf("%s\n", CHEMIN_FICHIER_ECRITURE);
