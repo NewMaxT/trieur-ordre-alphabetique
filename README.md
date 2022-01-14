@@ -8,3 +8,8 @@ La limite du nombre de mots peuvent être défini ici :
 
 Lancez le logiciel.
 Fin.
+
+Collab sur la repo:
+
+Valentin B.
+Max.
