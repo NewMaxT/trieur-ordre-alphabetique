@@ -3,8 +3,12 @@
 Manuel d'utilisation :
 
 La limite du nombre de mots peuvent être défini ici : 
+
+```cpp
  #define​ ​MAX_LIGNE​ (​1500​)
-(Temporaire)
+```
+
+Gui en développement
 
 Lancez le logiciel.
 Fin.
